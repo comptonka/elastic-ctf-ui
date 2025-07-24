@@ -11,7 +11,7 @@ wait_for_port_to_free() {
   local port=$1
   echo "⏳ Waiting for port $port to become available..."
   while lsof -i :$port -sTCP:LISTEN >/dev/null 2>&1; do
-    sleep 0.5
+    sleep 3
   done
 }
 
